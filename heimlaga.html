@@ -1,9 +1,12 @@
 <!DOCTYPE html>
+<!-- Document type declaration and language setting -->
 <html lang="no">
 
 <head>
+  <!-- Meta tags: character encoding and responsive viewport -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Page title -->
   <title>Heimlaga - Meråker Kunstforening</title>
   <!-- Primary SEO meta tags -->
   <meta name="description"
@@ -41,7 +44,7 @@
       ]
     }
     </script>
-  <!-- Tailwind CSS via CDN -->
+  <!-- Load Tailwind CSS via official CDN for utility-first styling -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Preconnect hint for Facebook domain to speed up iframe requests -->
   <link rel="preconnect" href="https://www.facebook.com" crossorigin />
@@ -49,16 +52,17 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
 </head>
 
-<body class="bg-white font-sans">
+<body class="bg-white font-sans antialiased">
   <!-- Navigation Bar -->
   <nav>
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between">
+        <!-- Branding and Logo -->
         <div class="flex-col w-full">
           <div>
             <a href="index.html" class="flex items-center py-2 px-2 group">
               <img src="images/MeraakerLogoBlack.png" alt="Meråker Kunstforening"
-                class="max-w-full max-h-64 object-contain" id="navLogo" />
+                class="max-w-full max-h-64 object-contain transition-transform duration-200" id="navLogo" />
             </a>
           </div>
           <!-- Top Divider Line -->
@@ -89,6 +93,7 @@
               </a>
             </div>
           </div>
+          <!-- Bottom Divider Line -->
           <hr class="border-t border-[oklch(0.378_0.077_168.94)] opacity-30" />
         </div>
         <!-- Mobile Menu Button -->
@@ -207,12 +212,12 @@
   <!-- Divider Line -->
   <hr class="border-t border-[oklch(0.527_0.154_150.069)] max-w-7xl mx-auto opacity-30" />
 
-  <!-- Footer -->
+  <!-- Footer with dynamic current year -->
   <footer class="py-4 text-center text-gray-500 font-serif">Meråker kunstforening <span id="currentYear"></span>
   </footer>
 
-  <!-- JavaScript file -->
-  <script src="main.js"></script>
+  <!-- Main JS: handles mobile menu toggle, dynamic year, and logo hover -->
+  <script src="main.js" defer></script>
   <!-- Lightbox JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
