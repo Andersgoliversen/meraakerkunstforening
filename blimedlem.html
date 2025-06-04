@@ -1,9 +1,12 @@
 <!DOCTYPE html>
+<!-- Document type declaration and language setting -->
 <html lang="no">
 
 <head>
+  <!-- Meta tags: character encoding and responsive viewport -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Page title -->
   <title>Bli medlem - Meråker Kunstforening</title>
   <!-- Primary SEO meta tags -->
   <meta name="description"
@@ -41,22 +44,24 @@
       ]
     }
     </script>
-  <!-- Tailwind CSS via CDN -->
+  <!-- Load Tailwind CSS via official CDN for utility-first styling -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Preconnect hint for Facebook domain to speed up iframe requests -->
   <link rel="preconnect" href="https://www.facebook.com" crossorigin />
 </head>
 
-<body class="bg-white font-sans">
+<body class="bg-white font-sans antialiased">
 
+  <!-- Navigation Bar -->
   <nav>
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between">
+        <!-- Branding and Logo -->
         <div class="flex-col w-full">
           <div>
             <a href="index.html" class="flex items-center py-2 px-2 group">
               <img src="images/MeraakerLogoBlack.png" alt="Meråker Kunstforening"
-                class="max-w-full max-h-64 object-contain" id="navLogo" />
+                class="max-w-full max-h-64 object-contain transition-transform duration-200" id="navLogo" />
             </a>
           </div>
           <!-- Top Divider Line -->
@@ -88,6 +93,7 @@
             </a>
 
           </div>
+          <!-- Bottom Divider Line -->
           <hr class="border-t border-[oklch(0.378_0.077_168.94)] opacity-30">
         </div>
         <div class="md:hidden flex items-center absolute top-4 right-4">
@@ -121,6 +127,7 @@
     </div>
   </nav>
 
+  <!-- Main Content Container -->
   <div class="max-w-7xl mx-auto p-4">
     <section class="my-8">
       <h1 class="text-3xl mb-4 text-[oklch(0.378_0.077_168.94)]">BLI MEDLEM I MERÅKER KUNSTFORENING</h1>
@@ -155,13 +162,13 @@
   <!-- Divider Line -->
   <hr class="border-t border-[oklch(0.527_0.154_150.069)] max-w-7xl mx-auto opacity-30">
 
-  <!-- Footer -->
+  <!-- Footer with dynamic current year -->
   <footer class="py-4 text-center text-gray-500 font-serif">
     Meråker kunstforening <span id="currentYear"></span>
   </footer>
 
-  <!-- JavaScript file -->
-  <script src="main.js"></script>
+  <!-- Main JS: handles mobile menu toggle, dynamic year, and logo hover -->
+  <script src="main.js" defer></script>
 </body>
 
 </html>
