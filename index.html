@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- Document type declaration and language setting -->
+<html lang="no">
+
+<head>
+  <!-- Meta tags: character encoding and responsive viewport -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Page title -->
+  <title>Hjem - Meråker Kunstforening</title>
+
+  <!-- Primary SEO meta tags -->
+  <meta name="description"
+    content="Meråker Kunstforening fremmer kunstinteressen i Meråker gjennom utstillinger, kunsttreff og salg av heimlaga produkter." />
+  <meta name="keywords" content="Meråker, kunst, kunstforening, utstillinger, kunsttreff, heimlaga" />
+  <link rel="canonical" href="https://merakerkunstforening.no/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://merakerkunstforening.no/" />
+  <meta property="og:title" content="Meråker Kunstforening" />
+  <meta property="og:description"
+    content="Meråker Kunstforening fremmer kunstinteressen i Meråker gjennom utstillinger, kunsttreff og salg av heimlaga produkter." />
+  <meta property="og:image" content="https://merakerkunstforening.no/images/MeraakerLogoBlack.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://merakerkunstforening.no/" />
+  <meta name="twitter:title" content="Meråker Kunstforening" />
+  <meta name="twitter:description"
+    content="Meråker Kunstforening fremmer kunstinteressen i Meråker gjennom utstillinger, kunsttreff og salg av heimlaga produkter." />
+  <meta name="twitter:image" content="https://merakerkunstforening.no/images/MeraakerLogoBlack.png" />
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Meråker Kunstforening",
+      "url": "https://merakerkunstforening.no/",
+      "logo": "https://merakerkunstforening.no/images/MeraakerLogoBlack.png",
+      "sameAs": [
+        "https://www.facebook.com/Mer%C3%A5ker-kunstforening-100064623312280"
+      ]
+    }
+    </script>
+
+  <!-- Load Tailwind CSS via official CDN for utility-first styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Preconnect hint for Facebook domain to speed up iframe requests -->
+  <link rel="preconnect" href="https://www.facebook.com" crossorigin />
+</head>
+
+<body class="bg-white font-sans antialiased">
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between relative">
+        <!-- Branding and Logo -->
+        <div class="flex-col w-full">
+          <div>
+            <a href="index.html" class="flex items-center py-2 px-2 group">
+              <img id="navLogo" src="images/MeraakerLogoBlack.png" alt="Meråker Kunstforening"
+                class="max-w-full max-h-64 object-contain transition-transform duration-200" />
+            </a>
+          </div>
+          <!-- Top Divider Line -->
+          <hr class="border-t-1 border-[oklch(0.378_0.077_168.94)] opacity-30" />
+          <!-- Desktop Navigation Menu -->
+          <div class="hidden md:flex justify-between items-center">
+            <div class="flex space-x-8 justify-center flex-grow">
+              <a href="om.html" class="py-5 px-3 text-gray-700 text-lg hover:text-[oklch(0.448_0.119_151.328)]">OM
+                OSS</a>
+              <a href="medlemmer.html"
+                class="py-5 px-3 text-gray-700 text-lg hover:text-[oklch(0.448_0.119_151.328)]">MEDLEMMER</a>
+              <a href="blimedlem.html"
+                class="py-5 px-3 text-gray-700 text-lg hover:text-[oklch(0.448_0.119_151.328)]">BLI MEDLEM</a>
+              <a href="heimlaga.html"
+                class="py-5 px-3 text-gray-700 text-lg hover:text-[oklch(0.448_0.119_151.328)]">HEIMLAGA</a>
+              <a href="utstillinger.html"
+                class="py-5 px-3 text-gray-700 text-lg hover:text-[oklch(0.448_0.119_151.328)]">UTSTILLINGER</a>
+              <a href="kontakt.html"
+                class="py-5 px-3 text-gray-700 text-lg hover:text-[oklch(0.448_0.119_151.328)]">KONTAKT</a>
+            </div>
+            <!-- Facebook Icon Link - Desktop -->
+            <a href="https://www.facebook.com/p/Mer%C3%A5ker-kunstforening-100064623312280/"
+              class="py-5 px-3 text-gray-700 hover:text-[oklch(0.378_0.077_168.94)]" target="_blank"
+              rel="noopener noreferrer">
+              <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" />
+              </svg>
+            </a>
+          </div>
+          <!-- Bottom Divider Line -->
+          <hr class="border-t-1 border-[oklch(0.378_0.077_168.94)] opacity-30" />
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center absolute top-4 right-4">
+            <button class="mobile-menu-button">
+              <svg class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white">
+          <a href="om.html" class="block py-2 px-4 text-base hover:text-[oklch(0.448_0.119_151.328)]">OM OSS</a>
+          <a href="medlemmer.html"
+            class="block py-2 px-4 text-base hover:text-[oklch(0.448_0.119_151.328)]">MEDLEMMER</a>
+          <a href="blimedlem.html" class="block py-2 px-4 text-base hover:text-[oklch(0.448_0.119_151.328)]">BLI
+            MEDLEM</a>
+          <a href="heimlaga.html" class="block py-2 px-4 text-base hover:text-[oklch(0.448_0.119_151.328)]">HEIMLAGA</a>
+          <a href="utstillinger.html"
+            class="block py-2 px-4 text-base hover:text-[oklch(0.448_0.119_151.328)]">UTSTILLINGER</a>
+          <a href="kontakt.html" class="block py-2 px-4 text-base hover:text-[oklch(0.448_0.119_151.328)]">KONTAKT</a>
+        </div>
+      </div>
+  </nav>
+
+  <!-- Main content area: Facebook feed and introduction -->
+  <div class="max-w-7xl mx-auto p-4">
+    <!-- Hjem Section -->
+    <section id="hjem" class="my-8">
+      <div class="flex flex-col md:flex-row gap-6">
+        <!-- Embedded Facebook timeline (lazy-loaded for performance) -->
+        <div class="bg-white p-4 shadow rounded md:w-[500px] flex-shrink-0">
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMer%C3%A5ker-kunstforening-100064623312280&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+            width="500" height="600" style="border:none; overflow:hidden;" scrolling="no" frameborder="0"
+            allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- Text Content -->
+        <div class="flex-grow">
+          <p class="text-2xl italic font-bold mb-6">
+            Meråker Kunstforening sin målsetting er å fremme interessen for kunst og bidra med kunstneriske innslag i
+            bygda.
+          </p>
+          <p class="text-gray-700 mb-6">
+            Meråker Kunstforening arbeider for å fremme kunstinteressen i lokalsamfunnet vårt. Vi arrangerer
+            utstillinger, sosiale kunsttreff og driver butikken «Heimlaga i Meråker», hvor vi selger produkter laget av
+            medlemmene våre.
+          </p>
+          <p class="text-gray-700 mb-6">
+            Hos oss er alle velkomne – enten du skaper kunst selv, ønsker inspirasjon og fellesskap, eller bare vil
+            støtte det kreative miljøet i bygda vår.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Divider Line -->
+  <hr class="border-t-1 border-[oklch(0.527_0.154_150.069)] max-w-7xl mx-auto opacity-30" />
+
+  <!-- Footer with dynamic current year -->
+  <footer class="py-4 text-center text-gray-500 font-serif">
+    Meråker kunstforening <span id="currentYear"></span>
+  </footer>
+
+  <!-- Main JS: handles mobile menu toggle and dynamic year -->
+  <script src="main.js" defer></script>
+</body>
+
+</html>
