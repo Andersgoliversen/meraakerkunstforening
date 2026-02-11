@@ -1,0 +1,28 @@
+{
+  "name": "merakerkunstforening",
+  "version": "1.0.0",
+  "description": "Dette er kildekoden til nettsiden for Meråker Kunstforening. Innholdet består av HTML, JavaScript og bilder som viser foreningens aktiviteter. Prosjektet er spesifikt for Meråker Kunstforening, men enkelte elementer kan gjenbrukes av andre som ønsker å lage en tilsvarende nettside for sin kunstforening.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./input.css -o ./style.css",
+    "watch": "tailwindcss -i ./input.css -o ./style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andersgoliversen/meraakerkunstforening.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Andersgoliversen/meraakerkunstforening/issues"
+  },
+  "homepage": "https://github.com/Andersgoliversen/meraakerkunstforening#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19"
+  }
+}
