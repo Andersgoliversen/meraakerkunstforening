@@ -1,0 +1,51 @@
+{
+  "blimedlem.html": {
+    "title": "Bli medlem - Meråker Kunstforening",
+    "description": "Bli medlem i Meråker Kunstforening og delta i kunsttreff, utstillinger og heimlaga-butikken.",
+    "keywords": "medlemskap, Meråker, kunst, kunstforening, heimlaga",
+    "url": "https://merakerkunstforening.no/blimedlem.html",
+    "socialTitle": "Bli medlem - Meråker Kunstforening"
+  },
+  "heimlaga.html": {
+    "title": "Heimlaga - Meråker Kunstforening",
+    "description": "Heimlaga i Meråker – butikk med håndverk fra våre medlemmer og informasjon for utstillere.",
+    "keywords": "Heimlaga, Meråker, håndverk, butikk, utstiller, kunstforening",
+    "url": "https://merakerkunstforening.no/heimlaga.html",
+    "socialTitle": "Heimlaga - Meråker Kunstforening"
+  },
+  "index.html": {
+    "title": "Hjem - Meråker Kunstforening",
+    "description": "Meråker Kunstforening fremmer kunstinteressen i Meråker gjennom utstillinger, kunsttreff og salg av heimlaga produkter.",
+    "keywords": "Meråker, kunst, kunstforening, utstillinger, kunsttreff, heimlaga",
+    "url": "https://merakerkunstforening.no/",
+    "socialTitle": "Meråker Kunstforening"
+  },
+  "kontakt.html": {
+    "title": "Kontakt - Meråker Kunstforening",
+    "description": "Kontakt Meråker Kunstforening og se oversikt over styremedlemmer.",
+    "keywords": "kontakt, styre, Meråker kunstforening",
+    "url": "https://merakerkunstforening.no/kontakt.html",
+    "socialTitle": "Kontakt - Meråker Kunstforening"
+  },
+  "medlemmer.html": {
+    "title": "Medlemmer - Meråker Kunstforening",
+    "description": "Oversikt over medlemmer i Meråker Kunstforening.",
+    "keywords": "medlemmer, Meråker kunstforening, liste",
+    "url": "https://merakerkunstforening.no/medlemmer.html",
+    "socialTitle": "Medlemmer - Meråker Kunstforening"
+  },
+  "om.html": {
+    "title": "Om oss - Meråker Kunstforening",
+    "description": "Historien og målsettingen til Meråker Kunstforening.",
+    "keywords": "Meråker, kunst, kunstforening, historie",
+    "url": "https://merakerkunstforening.no/om.html",
+    "socialTitle": "Om oss - Meråker Kunstforening"
+  },
+  "utstillinger.html": {
+    "title": "Utstillinger - Meråker Kunstforening",
+    "description": "Informasjon om kommende og tidligere utstillinger arrangert av Meråker Kunstforening.",
+    "keywords": "utstillinger, Meråker kunstforening, kunstutstilling",
+    "url": "https://merakerkunstforening.no/utstillinger.html",
+    "socialTitle": "Utstillinger - Meråker Kunstforening"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "images/Heimlaga_armbaand.jpg": {
+    "src": "images/optimized/Heimlaga_armbaand-800.webp",
+    "width": 800,
+    "height": 760,
+    "srcset": "images/optimized/Heimlaga_armbaand-400.webp 400w, images/optimized/Heimlaga_armbaand-800.webp 800w, images/optimized/Heimlaga_armbaand-1200.webp 1200w"
+  },
+  "images/Heimlaga_honning.jpg": {
+    "src": "images/optimized/Heimlaga_honning-800.webp",
+    "width": 800,
+    "height": 653,
+    "srcset": "images/optimized/Heimlaga_honning-400.webp 400w, images/optimized/Heimlaga_honning-800.webp 800w, images/optimized/Heimlaga_honning-1200.webp 1200w"
+  },
+  "images/Heimlaga_knitt.jpg": {
+    "src": "images/optimized/Heimlaga_knitt-800.webp",
+    "width": 800,
+    "height": 799,
+    "srcset": "images/optimized/Heimlaga_knitt-400.webp 400w, images/optimized/Heimlaga_knitt-800.webp 800w, images/optimized/Heimlaga_knitt-1200.webp 1200w"
+  },
+  "images/Heimlaga_Lue1.jpg": {
+    "src": "images/optimized/Heimlaga_Lue1-800.webp",
+    "width": 800,
+    "height": 800,
+    "srcset": "images/optimized/Heimlaga_Lue1-400.webp 400w, images/optimized/Heimlaga_Lue1-800.webp 800w, images/optimized/Heimlaga_Lue1-1200.webp 1200w"
+  },
+  "images/Heimlaga_Lue2.jpg": {
+    "src": "images/optimized/Heimlaga_Lue2-800.webp",
+    "width": 800,
+    "height": 639,
+    "srcset": "images/optimized/Heimlaga_Lue2-400.webp 400w, images/optimized/Heimlaga_Lue2-800.webp 800w, images/optimized/Heimlaga_Lue2-1200.webp 1200w"
+  },
+  "images/Heimlaga_Utstilling.jpg": {
+    "src": "images/optimized/Heimlaga_Utstilling-800.webp",
+    "width": 800,
+    "height": 1422,
+    "srcset": "images/optimized/Heimlaga_Utstilling-400.webp 400w, images/optimized/Heimlaga_Utstilling-800.webp 800w, images/optimized/Heimlaga_Utstilling-1152.webp 1152w"
+  },
+  "images/Plakat_DyptInnISkogen_Liten.jpg": {
+    "src": "images/optimized/Plakat_DyptInnISkogen_Liten-800.webp",
+    "width": 800,
+    "height": 1131,
+    "srcset": "images/optimized/Plakat_DyptInnISkogen_Liten-400.webp 400w, images/optimized/Plakat_DyptInnISkogen_Liten-800.webp 800w, images/optimized/Plakat_DyptInnISkogen_Liten-849.webp 849w"
+  },
+  "images/JubileumsUtstilling2025_2Web.jpg": {
+    "src": "images/optimized/JubileumsUtstilling2025_2Web-800.webp",
+    "width": 800,
+    "height": 1131,
+    "srcset": "images/optimized/JubileumsUtstilling2025_2Web-400.webp 400w, images/optimized/JubileumsUtstilling2025_2Web-800.webp 800w, images/optimized/JubileumsUtstilling2025_2Web-849.webp 849w"
+  },
+  "images/iethjem_plakat1.jpg": {
+    "src": "images/optimized/iethjem_plakat1-800.webp",
+    "width": 800,
+    "height": 1131,
+    "srcset": "images/optimized/iethjem_plakat1-400.webp 400w, images/optimized/iethjem_plakat1-800.webp 800w, images/optimized/iethjem_plakat1-1200.webp 1200w"
+  },
+  "images/MeraakerLogoBlack.png": {
+    "src": "images/optimized/MeraakerLogoBlack.webp",
+    "width": 1487,
+    "height": 638
+  },
+  "images/MeraakerLogoGreen.png": {
+    "src": "images/optimized/MeraakerLogoGreen.webp",
+    "width": 1487,
+    "height": 638
+  }
+}
