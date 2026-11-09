@@ -3,3 +3,5 @@ node_modules/
 .env
 dist/
 /images/i_et_hjem/*
+/test-results/
+/playwright-report/

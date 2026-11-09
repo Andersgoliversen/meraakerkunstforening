@@ -16,14 +16,16 @@ async function build() {
   building = true;
   try {
     await run(path.join(__dirname, 'build.cjs'));
-    await run(require.resolve('tailwindcss/lib/cli.js'), ['-i', 'input.css', '-o', 'style.css', '--minify']);
+    const cliPackage = require.resolve('@tailwindcss/cli/package.json');
+    const cli = path.resolve(path.dirname(cliPackage), require(cliPackage).bin.tailwindcss);
+    await run(cli, ['-i', 'input.css', '-o', 'style.css', '--minify']);
     await run(path.join(__dirname, 'build.cjs'), ['--pages-only']);
   } catch (error) { console.error(error); }
   finally { building = false; if (pending) { pending = false; build(); } }
 }
 function schedule() { clearTimeout(timer); timer = setTimeout(build, 200); }
 watch('src', { recursive: true }, schedule);
-for (const file of ['input.css', 'tailwind.config.js', 'main.js']) watch(file, schedule);
+for (const file of ['input.css', 'main.js']) watch(file, schedule);
 watch('images', (event, file) => { if (file && !String(file).startsWith('optimized')) schedule(); });
 build();
 console.log('Watching source pages, layout, scripts, styles and original images.');

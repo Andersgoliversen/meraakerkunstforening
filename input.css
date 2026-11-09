@@ -1,24 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss" source(none);
+@source "./src";
+@source "./main.js";
+/* Keep navigation usable on an older cached page during deployment. */
+@source inline("md:flex md:hidden flex-grow shadow rounded");
+
+/* Alias used by older cached HTML during staged uploads. */
+@utility flex-grow { flex-grow: 1; }
+
+@theme {
+  --color-brand: oklch(0.378 0.077 168.94);
+  --color-brand-hover: oklch(0.448 0.119 151.328);
+  --color-brand-active: oklch(0.418 0.119 151.328);
+  --color-brand-divider: oklch(0.527 0.154 150.069);
+  /* Preserve the site's existing neutral palette and font stacks. */
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-500: #6b7280;
+  --color-gray-700: #374151;
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  /* Match the existing pixel breakpoints, including main.js's menu query. */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
 
 @layer base {
   [hidden] { display: none !important; }
   :focus-visible { outline: 3px solid #19764c; outline-offset: 4px; }
   main:focus { outline: none; }
   main { overflow-wrap: anywhere; }
+  button:not(:disabled), [role="button"]:not(:disabled) { cursor: pointer; }
+  *, ::before, ::after, ::backdrop { border-color: var(--color-gray-200); }
 }
 
 @layer components {
   .skip-link { @apply sr-only; }
-  .skip-link:focus { @apply not-sr-only fixed top-2 left-2 z-50 bg-white p-3 text-brand shadow; }
+  .skip-link:focus { @apply not-sr-only fixed top-2 left-2 z-50 bg-white p-3 text-brand shadow-sm; }
   .site-nav { @apply max-w-7xl mx-auto px-4 relative; }
   .logo-link { @apply inline-flex py-2 px-2 transition-transform duration-200; max-width: calc(100% - 52px); }
   .logo-link:hover { transform: scale(1.02); }
   .logo-link:active { transform: scale(.98); }
   .nav-logo { display: block; width: auto; height: auto; max-width: 100%; max-height: 256px; }
   .desktop-menu { @apply hidden lg:flex items-center justify-between; }
-  .desktop-links { @apply flex flex-grow justify-center gap-4 xl:gap-8; }
+  .desktop-links { @apply flex grow justify-center gap-4 xl:gap-8; }
   .nav-link { @apply inline-flex items-center py-5 px-3 text-gray-700 text-lg hover:text-brand-hover active:text-brand-active transition-transform duration-200 hover:scale-105 active:scale-95; }
   .nav-link[aria-current="page"] { @apply font-bold; }
   .mobile-menu { @apply lg:hidden; }
@@ -43,6 +70,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; scale: none !important; }
   a:hover, a:active, img:hover { transform: none !important; }
 }

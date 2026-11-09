@@ -12,13 +12,14 @@ This repository contains the website code for Meråker Kunstforening. It include
 
 Use Node.js 22.19 or newer and install the locked dependencies with `npm ci`.
 
-The build stays on Tailwind CSS 3 and uses the locally installed PostCSS, Autoprefixer and cssnano. Installing cssnano explicitly avoids the older browser database bundled in Tailwind's fallback minifier.
+The build uses Tailwind CSS 4 and its dedicated `@tailwindcss/cli` package. The CLI handles imports, vendor prefixes and minification; PostCSS, Autoprefixer and cssnano are no longer needed. Theme values and explicit source scanning live in `input.css`. The existing font stacks, neutral colors, pixel breakpoints, shadow and radius sizes are preserved. Browser support follows [Tailwind 4's requirements](https://tailwindcss.com/docs/upgrade-guide#browser-requirements): Safari 16.4+, Chrome 111+ and Firefox 128+.
 
 - Edit page markup in `src/pages/*.html` and page metadata in `src/pages.json`.
 - Edit the shared header, navigation, footer and gallery dialog in `src/layout.cjs`.
-- Edit styles in `input.css`, color tokens in `tailwind.config.js`, and browser behavior in `main.js`.
+- Edit styles, color tokens and breakpoints in `input.css`, and browser behavior in `main.js`.
 - Run `npm run build` to generate responsive WebP images, the seven root HTML pages and minified `style.css`.
 - Run `npm test` to validate HTML, accessibility markup, local asset references and preservation of existing page text, links and embeds.
+- Install Chromium once with `npx playwright install chromium`, then run `npm run test:browser` for layout and interaction checks. CI installs the browser and runs these tests too.
 - Run `npm run serve` for a local preview at `http://127.0.0.1:4173`. In another terminal, `npm run watch` rebuilds when source files change; reload the browser to see changes. Set `PORT` to use a different local port.
 
 The root HTML files and `style.css` are generated, committed deployment files. Do not edit them directly: the next build overwrites them. `npm run build:pages` refreshes HTML without reprocessing images; use the full build after adding or changing pictures.
@@ -34,6 +35,8 @@ Generated pages include content-based version queries for CSS and JavaScript so 
 ## Regression checks
 
 CI rebuilds and tests the site, then rejects changes to tracked files or newly generated, uncommitted optimized images. Always commit the generated deployment files together with source changes.
+
+The browser tests cover all seven pages at 320, 390, 768, 1024 and 1280 pixels, mobile/desktop navigation, keyboard focus, logo hover, gallery controls and focus restoration, reduced motion, touch input and no-JavaScript fallbacks. They replace iframe contents with inert placeholders while retaining their real URLs and dimensions, so they test our responsive iframe code without depending on Facebook or Google Maps availability. They do not verify live third-party content. Set `LAYOUT_REPORT_DIR` to save layout measurements and selected screenshots for before/after comparisons on the same browser and OS.
 
 The homepage Facebook plugin and organization metadata use the same `/p/` page address as the navigation and contact links. The plugin requests `tabs=timeline`; Facebook controls which posts are available to visitors. If only the page heading appears, check the page's public visibility and restrictions in Facebook as well as the plugin itself.
 
