@@ -85,3 +85,29 @@ test('generated pages reference the current CSS and JavaScript versions', () => 
     for (const file of Object.keys(pages)) assert.ok(fs.readFileSync(file, 'utf8').includes(`${asset}?v=${hash}`), `${file} has a stale ${asset} version; run npm run build`);
   }
 });
+
+test('optimized image URLs match their contents', () => {
+  for (const asset of Object.values(assets)) {
+    const files = new Set([asset.src]);
+    if (asset.srcset) {
+      for (const candidate of asset.srcset.split(',')) files.add(candidate.trim().split(/\s+/)[0]);
+    }
+    for (const file of files) {
+      const hash = createHash('sha256').update(fs.readFileSync(file)).digest('hex').slice(0, 12);
+      assert.ok(file.endsWith(`-${hash}.webp`), `${file} has a stale image version`);
+    }
+  }
+});
+
+test('homepage Facebook timeline and metadata use the public page link', () => {
+  const html = fs.readFileSync('index.html', 'utf8');
+  const expected = 'https://www.facebook.com/p/Mer%C3%A5ker-kunstforening-100064623312280/';
+  const frame = html.match(/<iframe\b[^>]*data-facebook-embed[^>]*src="([^"]+)"/)[1];
+  const plugin = new URL(frame.replaceAll('&amp;', '&'));
+  assert.equal(plugin.searchParams.get('href'), expected);
+  assert.equal(plugin.searchParams.get('tabs'), 'timeline');
+  const structured = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/)[1]);
+  assert.deepEqual(structured.sameAs, [expected]);
+  assert.ok(html.includes(`href="${expected}"`));
+  assert.ok(fs.readFileSync('kontakt.html', 'utf8').includes(`href="${expected}"`));
+});

@@ -12,6 +12,8 @@ This repository contains the website code for Meråker Kunstforening. It include
 
 Use Node.js 22.19 or newer and install the locked dependencies with `npm ci`.
 
+The build stays on Tailwind CSS 3 and uses the locally installed PostCSS, Autoprefixer and cssnano. Installing cssnano explicitly avoids the older browser database bundled in Tailwind's fallback minifier.
+
 - Edit page markup in `src/pages/*.html` and page metadata in `src/pages.json`.
 - Edit the shared header, navigation, footer and gallery dialog in `src/layout.cjs`.
 - Edit styles in `input.css`, color tokens in `tailwind.config.js`, and browser behavior in `main.js`.
@@ -23,13 +25,17 @@ The root HTML files and `style.css` are generated, committed deployment files. D
 
 ## Images and deployment
 
-Original images stay in `images/` at their existing URLs. The build writes optimized versions and a manifest to `images/optimized/`. Gallery links still open the full-size originals; thumbnails use responsive images. Logo WebP files are lossless and keep the original resolution and transparency. Social metadata continues to reference the original PNG logo.
+Original images stay in `images/` at their existing URLs. The build writes optimized versions and a manifest to `images/optimized/`. Optimized filenames include a hash of their contents, so changed pictures get new URLs and refresh browser caches. Existing optimized files are retained for cached HTML during staged uploads. Gallery links still open the full-size originals; thumbnails use responsive images. Logo WebP files are lossless and keep the original resolution and transparency. Social metadata continues to reference the original PNG logo.
 
 Upload the seven generated root HTML pages, `main.js`, `style.css`, and the complete `images/` directory, including `images/optimized/`. No Node server, runtime dependencies, template files or `node_modules` are needed on the website host. Upload assets before HTML so new references are available when pages update.
 
 Generated pages include content-based version queries for CSS and JavaScript so cached assets refresh when they change. The menu and logo script also accepts the previous HTML markup during a staged upload.
 
 ## Regression checks
+
+CI rebuilds and tests the site, then rejects changes to tracked files or newly generated, uncommitted optimized images. Always commit the generated deployment files together with source changes.
+
+The homepage Facebook plugin and organization metadata use the same `/p/` page address as the navigation and contact links. The plugin requests `tabs=timeline`; Facebook controls which posts are available to visitors. If only the page heading appears, check the page's public visibility and restrictions in Facebook as well as the plugin itself.
 
 `tests/fixtures/original-pages.json` preserves the page text, content links and iframe destinations from before the implementation changes. Update the corresponding fixture deliberately when making an intentional content change later; do not regenerate it automatically during builds.
 
