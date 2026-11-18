@@ -35,6 +35,12 @@
     "height": 1422,
     "srcset": "images/optimized/Heimlaga_Utstilling-400-dc98456efc74.webp 400w, images/optimized/Heimlaga_Utstilling-800-60ce6aad248a.webp 800w, images/optimized/Heimlaga_Utstilling-1152-cf4374752fb2.webp 1152w"
   },
+  "images/DrommerPlakat.jpg": {
+    "src": "images/optimized/DrommerPlakat-507-57ae4bdf7a58.webp",
+    "width": 507,
+    "height": 729,
+    "srcset": "images/optimized/DrommerPlakat-400-9e95b90e5a53.webp 400w, images/optimized/DrommerPlakat-507-57ae4bdf7a58.webp 507w"
+  },
   "images/Plakat_DyptInnISkogen_Liten.jpg": {
     "src": "images/optimized/Plakat_DyptInnISkogen_Liten-800-fb16902ef010.webp",
     "width": 800,
